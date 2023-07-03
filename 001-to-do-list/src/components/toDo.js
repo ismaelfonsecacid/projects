@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // Retrieve the item values and a function
-export default function ToDo({ item, onUpdate }) {  
+export default function ToDo({ item, onUpdate, onDelete }) {  
     const [isEdit, setIsEdit] = useState(false);
 
     // Set isEdit state to true
@@ -43,7 +43,7 @@ export default function ToDo({ item, onUpdate }) {
             <div className="toDoInfo">
                 {item.title}
                 <button onClick={handleClick}>Edit</button>
-                <button>Delete</button>
+                <button onClick={(e)=>onDelete(item.id)}>Delete</button>
             </div>
         );
     }

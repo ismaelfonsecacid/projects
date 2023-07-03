@@ -1,7 +1,7 @@
 import { useState } from "react"
 import ToDo from "./toDo";
 export default function TodoApp() {
-    const [title, setTitle] = useState('Hola');
+    const [title, setTitle] = useState('');
     const [toDo, setToDo] = useState([]);
 
     function handleChange(e) {
@@ -18,6 +18,7 @@ export default function TodoApp() {
             completed: false
         }
         setToDo([...toDo, newToDo]);  //copy from existing todo list to avoid duplicates in future and add new todo list
+        setTitle("");
     }
 
     function handleUpdate (id,value){
@@ -27,10 +28,14 @@ export default function TodoApp() {
         setToDo(temp) //set the new array to the current one and update the existing one with the new value
     }
 
+    function handleDelete (id) {
+        const temp = toDo.filter(item => item.id !== id)
+        setToDo(temp);
+    }
     return (
         <div className="todoContainer">
             <form action="">
-                <input className="todoInput" type="text" onChange={handleChange} />
+                <input className="todoInput" onChange={handleChange} value={title}/>
                 <input
                     onClick={handleSubmit}
                     className="buttonCreate"
@@ -41,7 +46,7 @@ export default function TodoApp() {
             <div className="todDoContainer">
                 {
                     toDo.map(item => (
-                       <ToDo key={item.id} item={item} onUpdate={handleUpdate}/>
+                       <ToDo key={item.id} item={item} onUpdate={handleUpdate} onDelete={handleDelete}/>
                     ))
                 }
             </div>
