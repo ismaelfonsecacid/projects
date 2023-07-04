@@ -1,3 +1,7 @@
+# Info about the project
+
+Is a task list developed using React. This application allows users to create, edit, and delete tasks as needed. With its intuitive and user-friendly interface, managing tasks becomes a breeze.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
