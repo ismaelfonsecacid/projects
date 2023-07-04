@@ -20,8 +20,7 @@ To run these projects locally, follow the instructions below:
 
 1. Clone the repository:
    ```shell
-   git clone https://github.com/your-username/your-repository.git
-    ```
+   git clone https://github.com/ismaelfonsecacid/projects.git
 2. Navigate to the project directory 
     ```shell 
     cd project-folder
