@@ -12,7 +12,7 @@ export default function WeatherMainInfo({ weather }) {
             <div>
                 {weather?.location.country}
             </div>
-            <div>
+            <div className="flex text-center justify-center">
                 <img src={`http:${weather?.current.condition.icon}`} width='128' alt="imagen" />
             </div>
             <div>

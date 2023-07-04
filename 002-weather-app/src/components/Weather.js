@@ -33,13 +33,13 @@ export default function Weather() {
 
 
     return (
-        <>
-            <div className='bg-red-700'>
+        <div className='flex flex-col'>
+            <div className=''>
                 <WeatherForm onChangeCity={handleChangeCity}/>
             </div>
-            <div>
+            <div className='mt-6 pt-6 border border-black rounded-md bg-gray-50'>
                 <WeatherMainInfo weather={weather}/>
             </div>
-        </>
+        </div>
     )
 }

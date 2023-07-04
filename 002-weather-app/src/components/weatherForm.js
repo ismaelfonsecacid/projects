@@ -19,7 +19,7 @@ export default function WeatherForm({ onChangeCity }) {
 
     return (
         <form onSubmit={handleSubmit}>
-            <input type="text" onChange={onChange}></input>
+            <input type="text" onChange={onChange} className="border border-black"></input>
         </form>
     )
 }
