@@ -1,3 +1,7 @@
+# Info about the project
+
+Is an application that displays weather information. Leveraging the power of React, it provides a dynamic and interactive user interface for retrieving and presenting real-time weather data. Users can input their location and receive updates on temperature, location, and more.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
