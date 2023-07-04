@@ -19,22 +19,21 @@ Feel free to explore these projects and witness my journey in front-end developm
 To run these projects locally, follow the instructions below:
 
 1. Clone the repository:
-
    ```shell
    git clone https://github.com/your-username/your-repository.git
     ```
 2. Navigate to the project directory 
- ```shell 
-   cd project-folder
-```
+    ```shell 
+    cd project-folder
+    ```
 3. Install the dependencies:
-```shell 
-   npm install
-```
+    ```shell 
+    npm install
+    ```
 4. Start the development server:
-```shell 
-   npm start
-```
+    ```shell 
+    npm start
+    ```
 5. Open your web browser and visit http://localhost:3000 to see the project in action.
 
 
