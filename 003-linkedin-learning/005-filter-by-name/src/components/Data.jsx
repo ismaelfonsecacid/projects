@@ -10,13 +10,13 @@ export default function Data() {
         country.nombre.toLowerCase().includes(search.toLowerCase())
     );
 
-    const sortCountries = (data) => {
+    const sortCountries = (data) => {  //set the parameter to sort
         setSortBy(data);
     };
 
     const sortedCountries = () => {
         let sorted = [...filteredCountries];
-        switch (sortBy) {
+        switch (sortBy) {  //switch vs sortby
             case 'hotel':
                 sorted.sort((a, b) => a.ranking_hotel - b.ranking_hotel);
                 break;
