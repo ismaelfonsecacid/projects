@@ -1,24 +1,53 @@
-import { useState } from 'react';
-import countryData from './CountryData.json'
+import React, { useState } from 'react';
+import countryData from './CountryData.json';
 
 export default function Data() {
     const countries = countryData.paises;
     const [search, setSearch] = useState('');
+    const [sortBy, setSortBy] = useState('');
 
     const filteredCountries = countries.filter(country =>
         country.nombre.toLowerCase().includes(search.toLowerCase())
     );
+
+    const sortCountries = (data) => {
+        setSortBy(data);
+    };
+
+    const sortedCountries = () => {
+        let sorted = [...filteredCountries];
+        switch (sortBy) {
+            case 'hotel':
+                sorted.sort((a, b) => a.ranking_hotel - b.ranking_hotel);
+                break;
+            case 'precio':
+                sorted.sort((a, b) => a.ranking_precio - b.ranking_precio);
+                break;
+            case 'comida':
+                sorted.sort((a, b) => a.ranking_comida - b.ranking_comida);
+                break;
+            default:
+                return sorted;
+        }
+        return sorted;
+    };
+
     return (
         <>
             <div>
-                <h3>Filtra por: <input onChange={(e) => setSearch(e.target.value)}></input> </h3>
+                <h3>Filtra por: <input onChange={(e) => setSearch(e.target.value)} /></h3>
+                <div>
+                    <button onClick={() => sortCountries('hotel')}>Ordenar por ranking de hotel</button>
+                    <button onClick={() => sortCountries('precio')}>Ordenar por ranking de precio</button>
+                    <button onClick={() => sortCountries('comida')}>Ordenar por ranking de comida</button>
+                </div>
             </div>
             <div style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(3, 1fr)',
                 gap: '20px'
             }}>
-                {filteredCountries.map((country, index) => (
+                {sortedCountries().map((country, index) => (
                     <div
                         key={index}
                         style={{
@@ -46,9 +75,6 @@ export default function Data() {
                     </div>
                 ))}
             </div>
-
-
-
         </>
-    )
+    );
 }

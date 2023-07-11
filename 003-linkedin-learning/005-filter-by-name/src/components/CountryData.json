@@ -1,154 +1,184 @@
 {
-  "paises": [
+    "paises": [
     {
-      "nombre": "Estados Unidos",
-      "pais": "Estados Unidos de América",
-      "atracciones": [
-        "Estatua de la Libertad",
-        "Gran Cañón",
-        "Times Square"
-      ],
-      "idioma": "Inglés",
-      "comidas_populares": [
-        "Hamburguesa",
-        "Hot dog",
-        "Barbacoa"
-      ]
+    "nombre": "Estados Unidos",
+    "pais": "Estados Unidos de América",
+    "atracciones": [
+    "Estatua de la Libertad",
+    "Gran Cañón",
+    "Times Square"
+    ],
+    "idioma": "Inglés",
+    "comidas_populares": [
+    "Hamburguesa",
+    "Hot dog",
+    "Barbacoa"
+    ],
+    "ranking_comida": 4,
+    "ranking_hotel": 3,
+    "ranking_precio": 2
     },
     {
-      "nombre": "Francia",
-      "pais": "República Francesa",
-      "atracciones": [
-        "Torre Eiffel",
-        "Museo del Louvre",
-        "Catedral de Notre Dame"
-      ],
-      "idioma": "Francés",
-      "comidas_populares": [
-        "Croissant",
-        "Baguette",
-        "Ratatouille"
-      ]
+    "nombre": "Francia",
+    "pais": "República Francesa",
+    "atracciones": [
+    "Torre Eiffel",
+    "Museo del Louvre",
+    "Catedral de Notre Dame"
+    ],
+    "idioma": "Francés",
+    "comidas_populares": [
+    "Croissant",
+    "Baguette",
+    "Ratatouille"
+    ],
+    "ranking_comida": 5,
+    "ranking_hotel": 4,
+    "ranking_precio": 3
     },
     {
-      "nombre": "China",
-      "pais": "República Popular China",
-      "atracciones": [
-        "Gran Muralla China",
-        "Ciudad Prohibida",
-        "Guilin y el río Li"
-      ],
-      "idioma": "Chino",
-      "comidas_populares": [
-        "Arroz frito",
-        "Dim sum",
-        "Pato a la pekinesa"
-      ]
+    "nombre": "China",
+    "pais": "República Popular China",
+    "atracciones": [
+    "Gran Muralla China",
+    "Ciudad Prohibida",
+    "Guilin y el río Li"
+    ],
+    "idioma": "Chino",
+    "comidas_populares": [
+    "Arroz frito",
+    "Dim sum",
+    "Pato a la pekinesa"
+    ],
+    "ranking_comida": 4,
+    "ranking_hotel": 3,
+    "ranking_precio": 3
     },
     {
-      "nombre": "Brasil",
-      "pais": "República Federativa de Brasil",
-      "atracciones": [
-        "Cristo Redentor",
-        "Playa de Copacabana",
-        "Selva Amazónica"
-      ],
-      "idioma": "Portugués",
-      "comidas_populares": [
-        "Feijoada",
-        "Churrasco",
-        "Açaí"
-      ]
+    "nombre": "Brasil",
+    "pais": "República Federativa de Brasil",
+    "atracciones": [
+    "Cristo Redentor",
+    "Playa de Copacabana",
+    "Selva Amazónica"
+    ],
+    "idioma": "Portugués",
+    "comidas_populares": [
+    "Feijoada",
+    "Churrasco",
+    "Açaí"
+    ],
+    "ranking_comida": 5,
+    "ranking_hotel": 4,
+    "ranking_precio": 2
     },
     {
-      "nombre": "Japón",
-      "pais": "Japón",
-      "atracciones": [
-        "Monte Fuji",
-        "Templo de Kiyomizu",
-        "Barrio de Shinjuku"
-      ],
-      "idioma": "Japonés",
-      "comidas_populares": [
-        "Sushi",
-        "Ramen",
-        "Tempura"
-      ]
+    "nombre": "Japón",
+    "pais": "Japón",
+    "atracciones": [
+    "Monte Fuji",
+    "Templo de Kiyomizu",
+    "Barrio de Shinjuku"
+    ],
+    "idioma": "Japonés",
+    "comidas_populares": [
+    "Sushi",
+    "Ramen",
+    "Tempura"
+    ],
+    "ranking_comida": 5,
+    "ranking_hotel": 5,
+    "ranking_precio": 3
     },
     {
-      "nombre": "Australia",
-      "pais": "Mancomunidad de Australia",
-      "atracciones": [
-        "Ópera de Sídney",
-        "Gran Barrera de Coral",
-        "Uluru"
-      ],
-      "idioma": "Inglés",
-      "comidas_populares": [
-        "Vegemite",
-        "Barbacoa australiana",
-        "Anzac biscuits"
-      ]
+    "nombre": "Australia",
+    "pais": "Mancomunidad de Australia",
+    "atracciones": [
+    "Ópera de Sídney",
+    "Gran Barrera de Coral",
+    "Uluru"
+    ],
+    "idioma": "Inglés",
+    "comidas_populares": [
+    "Vegemite",
+    "Barbacoa australiana",
+    "Anzac biscuits"
+    ],
+    "ranking_comida": 3,
+    "ranking_hotel": 4,
+    "ranking_precio": 3
     },
     {
-      "nombre": "Italia",
-      "pais": "República Italiana",
-      "atracciones": [
-        "Coliseo Romano",
-        "Canales de Venecia",
-        "Torre de Pisa"
-      ],
-      "idioma": "Italiano",
-      "comidas_populares": [
-        "Pizza",
-        "Pasta",
-        "Gelato"
-      ]
+    "nombre": "Italia",
+    "pais": "República Italiana",
+    "atracciones": [
+    "Coliseo Romano",
+    "Canales de Venecia",
+    "Torre de Pisa"
+    ],
+    "idioma": "Italiano",
+    "comidas_populares": [
+    "Pizza",
+    "Pasta",
+    "Gelato"
+    ],
+    "ranking_comida": 5,
+    "ranking_hotel": 5,
+    "ranking_precio": 4
     },
     {
-      "nombre": "México",
-      "pais": "Estados Unidos Mexicanos",
-      "atracciones": [
-        "Chichén Itzá",
-        "Ciudad de México",
-        "Playa del Carmen"
-      ],
-      "idioma": "Español",
-      "comidas_populares": [
-        "Tacos",
-        "Guacamole",
-        "Chiles en nogada"
-      ]
+    "nombre": "México",
+    "pais": "Estados Unidos Mexicanos",
+    "atracciones": [
+    "Chichén Itzá",
+    "Ciudad de México",
+    "Playa del Carmen"
+    ],
+    "idioma": "Español",
+    "comidas_populares": [
+    "Tacos",
+    "Guacamole",
+    "Chiles en nogada"
+    ],
+    "ranking_comida": 5,
+    "ranking_hotel": 4,
+    "ranking_precio": 3
     },
     {
-      "nombre": "Rusia",
-      "pais": "Federación de Rusia",
-      "atracciones": [
-        "Plaza Roja",
-        "Museo del Hermitage",
-        "Lago Baikal"
-      ],
-      "idioma": "Ruso",
-      "comidas_populares": [
-        "Pelmeni",
-        "Borsch",
-        "Blini"
-      ]
+    "nombre": "Rusia",
+    "pais": "Federación de Rusia",
+    "atracciones": [
+    "Plaza Roja",
+    "Museo del Hermitage",
+    "Lago Baikal"
+    ],
+    "idioma": "Ruso",
+    "comidas_populares": [
+    "Pelmeni",
+    "Borsch",
+    "Blini"
+    ],
+    "ranking_comida": 4,
+    "ranking_hotel": 3,
+    "ranking_precio": 3
     },
     {
-      "nombre": "Canadá",
-      "pais": "Canadá",
-      "atracciones": [
-        "Cataratas del Niágara",
-        "Parque Nacional Banff",
-        "Ciudad de Quebec"
-      ],
-      "idioma": "Inglés y Francés",
-      "comidas_populares": [
-        "Poutine",
-        "Sirop de maple",
-        "BeaverTails"
-      ]
+    "nombre": "Canadá",
+    "pais": "Canadá",
+    "atracciones": [
+    "Cataratas del Niágara",
+    "Parque Nacional Banff",
+    "Ciudad de Quebec"
+    ],
+    "idioma": "Inglés y Francés",
+    "comidas_populares": [
+    "Poutine",
+    "Sirop de maple",
+    "BeaverTails"
+    ],
+    "ranking_comida": 4,
+    "ranking_hotel": 4,
+    "ranking_precio": 3
     }
-  ]
-}
+    ]
+    }
