@@ -1,0 +1,154 @@
+{
+  "paises": [
+    {
+      "nombre": "Estados Unidos",
+      "pais": "Estados Unidos de América",
+      "atracciones": [
+        "Estatua de la Libertad",
+        "Gran Cañón",
+        "Times Square"
+      ],
+      "idioma": "Inglés",
+      "comidas_populares": [
+        "Hamburguesa",
+        "Hot dog",
+        "Barbacoa"
+      ]
+    },
+    {
+      "nombre": "Francia",
+      "pais": "República Francesa",
+      "atracciones": [
+        "Torre Eiffel",
+        "Museo del Louvre",
+        "Catedral de Notre Dame"
+      ],
+      "idioma": "Francés",
+      "comidas_populares": [
+        "Croissant",
+        "Baguette",
+        "Ratatouille"
+      ]
+    },
+    {
+      "nombre": "China",
+      "pais": "República Popular China",
+      "atracciones": [
+        "Gran Muralla China",
+        "Ciudad Prohibida",
+        "Guilin y el río Li"
+      ],
+      "idioma": "Chino",
+      "comidas_populares": [
+        "Arroz frito",
+        "Dim sum",
+        "Pato a la pekinesa"
+      ]
+    },
+    {
+      "nombre": "Brasil",
+      "pais": "República Federativa de Brasil",
+      "atracciones": [
+        "Cristo Redentor",
+        "Playa de Copacabana",
+        "Selva Amazónica"
+      ],
+      "idioma": "Portugués",
+      "comidas_populares": [
+        "Feijoada",
+        "Churrasco",
+        "Açaí"
+      ]
+    },
+    {
+      "nombre": "Japón",
+      "pais": "Japón",
+      "atracciones": [
+        "Monte Fuji",
+        "Templo de Kiyomizu",
+        "Barrio de Shinjuku"
+      ],
+      "idioma": "Japonés",
+      "comidas_populares": [
+        "Sushi",
+        "Ramen",
+        "Tempura"
+      ]
+    },
+    {
+      "nombre": "Australia",
+      "pais": "Mancomunidad de Australia",
+      "atracciones": [
+        "Ópera de Sídney",
+        "Gran Barrera de Coral",
+        "Uluru"
+      ],
+      "idioma": "Inglés",
+      "comidas_populares": [
+        "Vegemite",
+        "Barbacoa australiana",
+        "Anzac biscuits"
+      ]
+    },
+    {
+      "nombre": "Italia",
+      "pais": "República Italiana",
+      "atracciones": [
+        "Coliseo Romano",
+        "Canales de Venecia",
+        "Torre de Pisa"
+      ],
+      "idioma": "Italiano",
+      "comidas_populares": [
+        "Pizza",
+        "Pasta",
+        "Gelato"
+      ]
+    },
+    {
+      "nombre": "México",
+      "pais": "Estados Unidos Mexicanos",
+      "atracciones": [
+        "Chichén Itzá",
+        "Ciudad de México",
+        "Playa del Carmen"
+      ],
+      "idioma": "Español",
+      "comidas_populares": [
+        "Tacos",
+        "Guacamole",
+        "Chiles en nogada"
+      ]
+    },
+    {
+      "nombre": "Rusia",
+      "pais": "Federación de Rusia",
+      "atracciones": [
+        "Plaza Roja",
+        "Museo del Hermitage",
+        "Lago Baikal"
+      ],
+      "idioma": "Ruso",
+      "comidas_populares": [
+        "Pelmeni",
+        "Borsch",
+        "Blini"
+      ]
+    },
+    {
+      "nombre": "Canadá",
+      "pais": "Canadá",
+      "atracciones": [
+        "Cataratas del Niágara",
+        "Parque Nacional Banff",
+        "Ciudad de Quebec"
+      ],
+      "idioma": "Inglés y Francés",
+      "comidas_populares": [
+        "Poutine",
+        "Sirop de maple",
+        "BeaverTails"
+      ]
+    }
+  ]
+}
