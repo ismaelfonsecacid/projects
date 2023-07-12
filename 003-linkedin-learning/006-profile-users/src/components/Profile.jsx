@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 export default function Profile() {
     const [profile, setProfile] = useState([])
     const [qData, setQData] = useState(3)
-    const [checkQ, setCheckQ] = useState(false)
+    const [checkQ, setCheckQ] = useState(true)
 
 
     useEffect(() => {
@@ -16,8 +16,9 @@ export default function Profile() {
     }, [])
 
     function handleClick() {
-        setCheckQ(!checkQ)
-        if (checkQ == true) {
+        const bol = checkQ
+        setCheckQ(!bol)
+        if (bol == true) {
             setQData(10)
         } else {
             setQData(3)
