@@ -3,10 +3,10 @@
 Welcome to my GitHub repository! Here, you'll find my early React projects, showcasing my growth and experimentation in front-end development. Join me as I explore this powerful JavaScript library and create dynamic and interactive user interfaces.
 ## Table of Contents
 
-- [001-to-do-list](#001-to-do-list)
-- [002-weather-app](#002-weather-app)
-- [003-linkedin-learning](#003-linkedin-learning)
--- [Exercises](#Exercises).
+1.  [001-to-do-list](#001-to-do-list)
+2.  [002-weather-app](#002-weather-app)
+3.  [003-linkedin-learning](#003-linkedin-learning)
+   - [Exercises](#Exercises).
 
   
 ## 001-to-do-list
