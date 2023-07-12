@@ -1,7 +1,13 @@
 # Projects
 
 Welcome to my GitHub repository! Here, you'll find my early React projects, showcasing my growth and experimentation in front-end development. Join me as I explore this powerful JavaScript library and create dynamic and interactive user interfaces.
+## Table of Contents
 
+- [001-to-do-list](#001-to-do-list)
+- [002-weather-app](#002-weather-app)
+- [003-linkedin-learning](#003-linkedin-learning)
+
+  
 ## 001-to-do-list
 
 The "001-to-do-list" project is a task list developed using React. This application allows users to create, edit, and delete tasks as needed. With its intuitive and user-friendly interface, managing tasks becomes a breeze.
