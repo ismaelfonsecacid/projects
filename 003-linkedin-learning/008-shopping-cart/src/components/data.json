@@ -1,0 +1,34 @@
+{
+    "productos": [
+        {
+            "nombre": "Smarthphone",
+            "precio":600,
+            "id": 1
+        },
+        {
+            "nombre": "Laptop",
+            "precio":1000,
+            "id": 2
+        },
+        {
+            "nombre": "Watch",
+            "precio":200,
+            "id": 3
+        },
+        {
+            "nombre": "Keyboard",
+            "precio":25,
+            "id": 4
+        },
+        {
+            "nombre": "Mouse",
+            "precio":20,
+            "id": 5
+        },
+        {
+            "nombre": "TV",
+            "precio":450,
+            "id": 6
+        }
+    ]
+}
