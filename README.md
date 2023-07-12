@@ -6,6 +6,7 @@ Welcome to my GitHub repository! Here, you'll find my early React projects, show
 - [001-to-do-list](#001-to-do-list)
 - [002-weather-app](#002-weather-app)
 - [003-linkedin-learning](#003-linkedin-learning)
+-   -[Exercises](#Exercises).
 
   
 ## 001-to-do-list
