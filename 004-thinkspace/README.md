@@ -1,9 +1,13 @@
 # Design Brief Description
 
-We offer a variety of affordable destinations. We are able to offer the lowest prices because of our easy-to-use app. Our target audience is people on a budget. We want to convey a sense of elegance, while at the same time being business-like.
+Company Name:
+Sunstripe
+
+Company Description:
+We are a fashion company that sells plus-sized jeans. Our items are made with quick turnaround and are available in our retail stores. Our target audience is adults. We want to convey a sense of mystery, while at the same time being agreeable.
 
 Job Description:
-You must create a website that will mainly show a list of the company's products. The goal is to make the website easy to navigate. Besides the landing page, the website will need a information page, shop page and a blog. The landing page should have a Contact Us section. There should be a call to action to get users to view the catalogue. They would prefer a minimal design, and would like you to use the brand color, which is orange. Take into account the client's preferences and values.
+You must create a website that will mainly sell the company's products. The goal is to emphasize the brand's values. Besides the landing page, the website will need a information page, shop page and a terms of service page. The landing page should have a Our Values section. There should be a call to action to get users to call for more information. They would prefer a luxurious design, and would like you to use the brand color, which is red. Take into account the client's preferences and values.
 
 # Getting Started with Create React App
 
