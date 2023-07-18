@@ -3,7 +3,7 @@
 Company Name:
 Sunstripe
 
-Company Description:
+Company Description:s
 We are a fashion company that sells plus-sized jeans. Our items are made with quick turnaround and are available in our retail stores. Our target audience is adults. We want to convey a sense of mystery, while at the same time being agreeable.
 
 Job Description:

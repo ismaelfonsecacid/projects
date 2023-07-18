@@ -11,12 +11,12 @@ export default function Menu() {
         <>
             <header className={S.header}>
                 <div>
-                    <Link to='/'><img src="/nlogo2.png" alt="" style={{ width: '200px', height: '70px' }} /></Link>
+                    <Link to='/'><img src="/logo.png" alt="" style={{ width: '300px' }} /></Link>
                 </div>
                 <div className='flex flex-row items-center space-x-4 ' id='menuDisplay'> {/*'space-x-4' para espaciar los enlaces */}
                     {/* li > a */}
                     <Link to='/shop'>
-                        SHOPs
+                        SHOP
                     </Link>
                     <Link to='/blog'>
                         BLOG
