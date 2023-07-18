@@ -16,7 +16,7 @@ export default function Menu() {
                 <div className='flex flex-row items-center space-x-4 ' id='menuDisplay'> {/*'space-x-4' para espaciar los enlaces */}
                     {/* li > a */}
                     <Link to='/shop'>
-                        SHOP
+                        SHOPs
                     </Link>
                     <Link to='/blog'>
                         BLOG
