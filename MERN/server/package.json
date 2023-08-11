@@ -4,5 +4,8 @@
   "description": "El api de la web personal",
   "main": "index.js",
   "author": "Ismael Fonseca Cid",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "mongoose": "^7.4.2"
+  }
 }
