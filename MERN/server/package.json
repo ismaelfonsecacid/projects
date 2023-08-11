@@ -6,9 +6,10 @@
   "author": "Ismael Fonseca Cid",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js" 
+    "start": "node index.js"
   },
   "dependencies": {
+    "express": "^4.18.2",
     "mongoose": "^7.4.2"
   }
 }
