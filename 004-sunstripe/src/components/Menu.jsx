@@ -11,15 +11,15 @@ export default function Menu() {
         <>
             <header className={S.header}>
                 <div>
-                    <Link to='/'><img src="/logo.png" alt="" style={{ width: '300px' }} /></Link>
+                    <Link to='/'><img src="/logo.png" alt="" style={{ width: '140px' }} /></Link>
                 </div>
-                <div className='flex flex-row items-center space-x-4 ' id='menuDisplay'> {/*'space-x-4' para espaciar los enlaces */}
+                <div className='flex flex-row items-center space-x-4 text-white ' id='menuDisplay'> {/*'space-x-4' para espaciar los enlaces */}
                     {/* li > a */}
                     <Link to='/shop'>
                         SHOP
                     </Link>
-                    <Link to='/blog'>
-                        BLOG
+                    <Link to='/terms'>
+                        TERMS
                     </Link>
                     <Link to='/'>
                         HOME
@@ -30,7 +30,7 @@ export default function Menu() {
             <Routes>  {/* same as switch */}
                 <Route path="/"></Route>
                 <Route path="/shop" element={<Shop />} />
-                <Route path="/blog" element={<Blog />} />
+                <Route path="/terms" element={<Blog />} />
             </Routes>
         </>
     )
