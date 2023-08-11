@@ -1,7 +1,7 @@
 const express = require('express');
 const { API_VERSION } = require('./constants');
 const bodyParser = require('body-parser');
-
+const cors = require('cors');
 const app = express();
 
 //Import routes
@@ -15,6 +15,7 @@ app.use(express.static("uploads"));
 
 
 //Configure Header HTTP - CORS
+app.use(cors());
 
 //Configure routings
 
