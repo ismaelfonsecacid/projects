@@ -1,11 +1,14 @@
 const express = require('express');
-const {} = require('./constants');
+const { API_VERSION } = require('./constants');
+const bodyParser = require('body-parser');
 
 const app = express();
 
 //Import routes
 
-//Configure Body Parse
+//Configure Body Parser
+app.unsubscribe(bodyParser.urlencoded({ extended: true}));
+app.use(bodyParser.json());
 
 //Configure Header HTTP - CORS
 
