@@ -1,0 +1,8 @@
+{
+  "name": "web-personal-api",
+  "version": "0.0.1",
+  "description": "El api de la web personal",
+  "main": "index.js",
+  "author": "Ismael Fonseca Cid",
+  "license": "MIT"
+}
