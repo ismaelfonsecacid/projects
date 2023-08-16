@@ -74,7 +74,9 @@ async function createUser(req, res) {
 }
 
 async function updateUser(req, res) {
-    const { id } = req.params;
+    const {
+        id
+    } = req.params;
     const userData = req.body;
 
     try {
@@ -86,19 +88,41 @@ async function updateUser(req, res) {
             delete userData.password;
         }
 
-        if(req.files.avatar) {
-           const imagePath = image.getFileName(req.files.avatar);
-           userData.avatar = imagePath;
+        if (req.files.avatar) {
+            const imagePath = image.getFileName(req.files.avatar);
+            userData.avatar = imagePath;
         }
 
         await User.findByIdAndUpdate(id, userData);
 
-        res.status(200).send({ msg: 'Actualizacion correcta' });
+        res.status(200).send({
+            msg: 'Actualizacion correcta'
+        });
     } catch (error) {
-        res.status(400).send({ msg: 'Error al actualizar los datos' });
+        res.status(400).send({
+            msg: 'Error al actualizar los datos'
+        });
     }
 
 }
+
+async function deleteUser(req, res) {
+    const {
+        id
+    } = req.params;
+
+    try {
+        await User.findByIdAndDelete(id);
+        res.status(200).send({
+            msg: 'Usuario eliminado'
+        });
+    } catch (error) {
+        res.status(400).send({
+            msg: 'Error al eliminar el usuario'
+        });
+    }
+}
+
 
 
 
@@ -110,4 +134,5 @@ module.exports = {
     getUsers,
     createUser,
     updateUser,
+    deleteUser
 }
