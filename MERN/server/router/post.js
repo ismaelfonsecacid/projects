@@ -1,5 +1,5 @@
 const express = require('express');
-const PostController = require('../controller/post')
+const PostController = require('../controllers/post')
 const multiparty = require('connect-multiparty'); //this is for images
 
 const md_auth = require('../middleware/authenticated');
@@ -9,5 +9,7 @@ const md_upload = multiparty({
 
 const api = express.Router()
 
+api.post('/post', [md_auth.asureAuth, md_upload], PostController.createPost)
 
-module.exports = api
+
+module.exports = api;
