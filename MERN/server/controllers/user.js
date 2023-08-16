@@ -1,5 +1,9 @@
 const User = require('../models/user')
 const bcrypt = require('bcryptjs');
+const image =  require('../utils/image');
+
+
+
 async function getMe(req,res) {
     console.log(req.user)
 
@@ -38,7 +42,10 @@ async function createUser(req, res) {
     const user = new User({ ...req.body, active: false, password: hashedPassword });
 
     if (req.files.avatar) {
-        console.log('Process avatar TODO');
+
+        const imagePath = image.getFileName(req.files.avatar);
+        
+        user.avatar = imagePath;
     }
 
     try {
