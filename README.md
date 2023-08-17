@@ -7,6 +7,8 @@ Welcome to my GitHub repository! Here, you'll find my early React projects, show
 2.  [002-weather-app](#002-weather-app)
 3.  [003-linkedin-learning](#003-linkedin-learning)
       - [Exercises](#Exercises)
+4.  [MERN](#MERN)
+
 
   
 ## 001-to-do-list
@@ -19,6 +21,9 @@ The "002-weather-app" project is an application that displays weather informatio
 
 ## 003-linkedin-learning
 The "003-linkedin-learning" project is a collection of exercises completed throughout the React course on LinkedIn Learning. These exercises showcase my progress and learning in application development using React. Explore this project to see how I've applied the concepts and techniques taught in the course.
+
+## MERN
+This is a work-in-progress application that utilizes the MERN stack (MongoDB, Express, React, and Node.js) to create a comprehensive web development experience.
 
 ### Exercises
 
