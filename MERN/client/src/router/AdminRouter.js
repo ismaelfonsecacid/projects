@@ -1,11 +1,6 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import { Auth } from '../pages/admin/Auth/Auth'
-import { Users } from '../pages/admin/Users/Users'
-import { Blog } from '../pages/admin/Blog/Blog'
-import { Courses } from '../pages/admin/Courses/Courses'
-import { Menu } from '../pages/admin/Menu/Menu'
-import { Newsletter } from '../pages/admin/Newsletter/Newsletter'
+import { Auth, Blog, Users, Courses, Menu, Newsletter } from '../pages/admin'
 import { AdminLayout } from "../layouts"
 
 const user = { email: 'ismaelfonsecacid@gmail.com' };

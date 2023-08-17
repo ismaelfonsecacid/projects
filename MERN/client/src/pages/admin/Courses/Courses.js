@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function Courses() {
+export default function Courses() {
     return (
         <div>
             <h1>Estamos en los cursos</h1>

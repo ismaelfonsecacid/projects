@@ -1,6 +1,6 @@
 import React from 'react'
 
-export  function Users() {
+export default function Users() {
   return (
     <div>
       <h1>Estamos en users</h1>
