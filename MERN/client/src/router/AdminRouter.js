@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import { Auth, Blog, Users, Courses, Menu, Newsletter } from '../pages/admin'
 import { AdminLayout } from "../layouts"
 
-const user = { email: 'ismaelfonsecacid@gmail.com' };
+const user = null;
 
 export default function WebRouter() {
 
@@ -18,7 +18,7 @@ export default function WebRouter() {
     <Routes>
       {!user ? (
 
-        <Route path='/admin/*' element={loadLayout(AdminLayout, Auth)} />
+        <Route path='/admin/*' element={<Auth />} />
 
       ) : (
         <>
