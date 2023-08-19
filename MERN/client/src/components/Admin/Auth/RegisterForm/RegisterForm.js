@@ -4,7 +4,7 @@ import { useFormik } from 'formik'
 import { initialValues, validationSchema } from './RegisterForm.form'
 import './RegisterForm.scss';
 import { Auth } from '../../../../api'
-import { Await } from 'react-router-dom';
+
 
 const authController = new Auth();
 
