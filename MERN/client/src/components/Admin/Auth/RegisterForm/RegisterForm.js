@@ -3,8 +3,13 @@ import { Form } from 'semantic-ui-react';
 import { useFormik } from 'formik'
 import { initialValues, validationSchema } from './RegisterForm.form'
 import './RegisterForm.scss';
+import { Auth } from '../../../../api'
+import { Await } from 'react-router-dom';
 
-export default function RegisterForm() {
+const authController = new Auth();
+
+export default function RegisterForm(props) {
+    const { openLogin } = props
     const [error, setError] = useState(""); // Corrected the state variable name
 
     const formik = useFormik({
@@ -13,7 +18,10 @@ export default function RegisterForm() {
         validateOnChange: false,
         onSubmit: async (formValue) => {
             try {
-                console.log(formValue);
+                setError('')
+                await authController.register(formValue);
+                openLogin();
+
             } catch (error) {
                 console.error(error);
             }
