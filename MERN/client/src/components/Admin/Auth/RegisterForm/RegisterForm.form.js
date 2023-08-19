@@ -9,3 +9,14 @@ export function initialValues() {
     }
 
 }
+
+export function validationSchema() {
+    return Yup.object({
+        email: Yup.string()
+            .email('El email no es valido')
+            .required('Campo obligatorio'),
+        password: Yup.string().required('Campo obligatorio'),
+        repeatPassword: Yup.string().required('Campo obligatorio').oneOf([Yup.ref('password')], 'Las contraseñas tienen que ser iguales'),
+        conditionsAccept: Yup.bool().oneOf([true], 'Debes aceptar las políticas de privacidad'),
+    })
+} 
