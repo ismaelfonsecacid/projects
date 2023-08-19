@@ -16,8 +16,13 @@ export function AuthProvider(props) {
     }, [])
 
     const login = async (accessToken) => {
-        console.log('Login Context')
-        console.log(accessToken)
+        try {
+            setUser({ username: 'agustin' })
+            setToken(accessToken);
+
+        } catch (error) {
+            console.error();
+        }
     }
 
     const data = {

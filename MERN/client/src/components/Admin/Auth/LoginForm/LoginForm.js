@@ -3,10 +3,13 @@ import { Form } from "semantic-ui-react";
 import { useFormik } from 'formik'
 import { Auth } from '../../../../api/auth'
 import { initialValues, validationSchema } from './LoginForm.form'
+import { useAuth } from "../../../../hooks";
 
 const authController = new Auth();
 
 export default function LoginForm() {
+
+    const { login } = useAuth();
 
     const formik = useFormik({
         initialValues: initialValues(),
@@ -15,7 +18,8 @@ export default function LoginForm() {
         onSubmit: async (formValue) => {
             try {
                 const response = await authController.login(formValue)
-                console.log(response)
+                login(response.access)
+
 
             } catch (error) {
                 console.error(error);
