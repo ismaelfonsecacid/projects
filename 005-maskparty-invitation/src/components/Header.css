@@ -4,25 +4,20 @@
     color: white;
     padding: 1rem;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Centrado vertical */
+    height: 95vh;
+    /* 100% del alto de la ventana */
+    margin: 0;
+    /* Eliminamos el margen para que ocupe todo el espacio vertical */
 }
 
 .header h1 {
     margin: 0;
 }
 
-.dosh1 {
-    margin-left: 60px !important;
-    font-size: 27px;
-}
-
-.edad {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    color: white;
-}
-
-/* src/components/Header.css */
 @keyframes shine {
 
     0%,
