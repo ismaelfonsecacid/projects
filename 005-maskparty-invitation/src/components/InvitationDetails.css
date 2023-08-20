@@ -2,15 +2,15 @@
 .invitation-details-container {
     text-align: center;
     width: 100%;
-    height: 100%;
     border: 1px solid #D2B48C;
     border-radius: 8px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     color: white;
     background-image: url('/public/img/marco.png');
-    background-repeat: no-repeat;
+    background-repeat: round;
     /* Evita que la imagen se repita */
-    background-size: cover;
+    resize: both;
+    overflow: auto;
 }
 
 .invitation-detail {
