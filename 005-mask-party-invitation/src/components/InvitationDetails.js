@@ -1,12 +1,16 @@
 // src/components/InvitationDetails.js
 import React, { useState, useEffect } from 'react';
 import './InvitationDetails.css';
-
+import Confetti from 'react-confetti';
 function InvitationDetails() {
     const eventDate = new Date('2023-11-04T00:00:00'); // Cambia la fecha a la correcta
 
 
+    const [showAutoConfetti, setShowAutoConfetti] = useState(false); // Nuevo estado
     const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining());
+
+
+    const confettiColors = ['#FFFFFF', '#000000', '#808080', '#FFD700'];
 
     function calculateTimeRemaining() {
         const now = new Date();
@@ -28,6 +32,17 @@ function InvitationDetails() {
         }, 1000);
 
         return () => clearInterval(timer);
+    }, []);
+
+    useEffect(() => {
+        const autoConfettiTimer = setInterval(() => {
+            setShowAutoConfetti(true);
+            setTimeout(() => {
+                setShowAutoConfetti(false);
+            }, 3000); // Oculta el confeti automático después de 3 segundos
+        }, 10000); // Activa el confeti automático cada 10 segundos
+
+        return () => clearInterval(autoConfettiTimer);
     }, []);
 
 
@@ -68,6 +83,7 @@ function InvitationDetails() {
             </div>
             <div className="invitation-title">
                 <h1 className="special-number">20</h1>
+                {showAutoConfetti && <Confetti colors={confettiColors} />}
                 <h1 className="special-number">AÑOS</h1>
             </div>
             <div className="invitation-detail">
