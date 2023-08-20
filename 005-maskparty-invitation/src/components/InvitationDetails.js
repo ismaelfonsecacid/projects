@@ -15,11 +15,13 @@ function InvitationDetails() {
     function calculateTimeRemaining() {
         const now = new Date();
         const timeDiff = eventDate - now;
-        const hours = Math.floor(timeDiff / (1000 * 60 * 60));
+        const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
         return {
+            days,
             hours,
             minutes,
             seconds,
@@ -95,6 +97,10 @@ function InvitationDetails() {
             <div className="countdown">
                 <p className="countdown-label">Tiempo restante:</p>
                 <div className="time-squares">
+                    <div className="time-square">
+                        <p className="time-number">{timeRemaining.days}</p>
+                        <p className="time-label">Días</p>
+                    </div>
                     <div className="time-square">
                         <p className="time-number">{timeRemaining.hours}</p>
                         <p className="time-label">Horas</p>
