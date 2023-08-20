@@ -2,7 +2,7 @@
 .invitation-details-container {
     text-align: center;
     width: 100%;
-    border: 1px solid #D2B48C;
+
     border-radius: 8px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     color: white;
@@ -90,7 +90,6 @@
 
 .time-square {
     background-color: #f0f0f0;
-    border-radius: 8px;
     padding: 10px;
     margin: 0 10px;
     text-align: center;
