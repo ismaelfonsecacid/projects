@@ -87,8 +87,7 @@ function InvitationDetails() {
                 <h1 className="special-number">AÑOS</h1>
             </div>
             <div className="invitation-detail">
-                <div className="detail-label">Obligatorio:</div>
-                <div className="detail-content">Máscara</div>
+                <div className="detail-label">Obligatorio el uso de máscaras</div>
             </div>
             <div>
                 <img src='/img/mask.jpg' className='img' alt="Máscara" />
