@@ -10,7 +10,7 @@ function InvitationDetails() {
     const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining());
 
 
-    const confettiColors = ['#FFFFFF', '#000000', '#808080', '#FFD700'];
+    const confettiColors = ['#FFFFFF', '#000000', '#808080', '#D2B48C'];
 
     function calculateTimeRemaining() {
         const now = new Date();
