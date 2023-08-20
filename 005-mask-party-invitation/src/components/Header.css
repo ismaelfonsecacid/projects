@@ -1,0 +1,43 @@
+/* src/components/Header.css */
+.header {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.dosh1 {
+    margin-left: 60px !important;
+    font-size: 27px;
+}
+
+.edad {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* src/components/Header.css */
+@keyframes shine {
+
+    0%,
+    100% {
+        text-shadow: 0 0 10px #FFDF00, 0 0 20px #f6e25c, 0 0 30px #ffde08;
+    }
+
+    50% {
+        text-shadow: none;
+    }
+}
+
+.golden-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 50px;
+    color: white;
+    animation: shine 2s infinite;
+}

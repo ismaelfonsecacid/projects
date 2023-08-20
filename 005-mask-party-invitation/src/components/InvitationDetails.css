@@ -1,0 +1,18 @@
+/* src/components/InvitationDetails.css */
+.invitation-details {
+    background-color: white;
+    color: black;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.invitation-details h2 {
+    color: black;
+}
+
+.invitation-details p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}

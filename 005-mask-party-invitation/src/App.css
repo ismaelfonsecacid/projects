@@ -1,0 +1,50 @@
+/* App.css */
+.centro {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* Ocupar el 100% del alto de la ventana gráfica */
+  background-color: #f0f0f0;
+  color: white;
+}
+
+.nombre {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: white;
+
+}
+
+body {
+  background-color: black;
+}
+
+/* src/App.css */
+.marco {
+  margin: 15px;
+  padding: 0;
+  border: 5px solid #FFDF00;
+  /* Color del marco */
+}
+
+.App {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.nombre,
+.edad {
+  flex: 1;
+}
+
+.nombre p,
+.edad p {
+  margin: 0;
+}
