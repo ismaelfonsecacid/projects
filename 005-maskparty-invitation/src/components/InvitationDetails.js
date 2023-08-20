@@ -46,23 +46,23 @@ function InvitationDetails() {
     }, []);
 
 
-    const generateGoogleCalendarLink = () => {
-        const startTime = eventDate.toISOString().replace(/-|:|\.\d+/g, '');
-        const endTime = new Date(eventDate.getTime() + (2 * 60 * 60 * 1000))
-            .toISOString()
-            .replace(/-|:|\.\d+/g, '');
+    // const generateGoogleCalendarLink = () => {
+    //     const startTime = eventDate.toISOString().replace(/-|:|\.\d+/g, '');
+    //     const endTime = new Date(eventDate.getTime() + (2 * 60 * 60 * 1000))
+    //         .toISOString()
+    //         .replace(/-|:|\.\d+/g, '');
 
-        const eventDetails = {
-            text: 'Cumpleaños de Sara',
-            details: '¡Ven a celebrar el cumpleaños de Sara con nosotros!',
-            location: 'Calle Santa Barbara',
-            dates: `${startTime}/${endTime}`,
-        };
+    //     const eventDetails = {
+    //         text: 'Cumpleaños de Sara',
+    //         details: '¡Ven a celebrar el cumpleaños de Sara con nosotros!',
+    //         location: 'Calle Santa Barbara',
+    //         dates: `${startTime}/${endTime}`,
+    //     };
 
-        const calendarLink = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventDetails.text)}&details=${encodeURIComponent(eventDetails.details)}&location=${encodeURIComponent(eventDetails.location)}&dates=${eventDetails.dates}`;
+    //     const calendarLink = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventDetails.text)}&details=${encodeURIComponent(eventDetails.details)}&location=${encodeURIComponent(eventDetails.location)}&dates=${eventDetails.dates}`;
 
-        window.open(calendarLink, '_blank');
-    };
+    //     window.open(calendarLink, '_blank');
+    // };
 
     return (
         <div className="invitation-details-container">
@@ -70,9 +70,6 @@ function InvitationDetails() {
             <div className="invitation-detail">
                 <div className="detail-label">Fecha:</div>
                 <div className="detail-content">4 de Noviembre</div>
-                <button className="add-to-calendar-button" onClick={generateGoogleCalendarLink}>
-                    Añadir a Google Calendar
-                </button>
             </div>
             <div className="invitation-detail">
                 <div className="detail-label">Lugar:</div>
