@@ -1,16 +1,18 @@
 # Projects
 
 Welcome to my GitHub repository! Here, you'll find my early React projects, showcasing my growth and experimentation in front-end development. Join me as I explore this powerful JavaScript library and create dynamic and interactive user interfaces.
-## Table of Contents
+
+## Index
 
 1.  [001-to-do-list](#001-to-do-list)
 2.  [002-weather-app](#002-weather-app)
 3.  [003-linkedin-learning](#003-linkedin-learning)
       - [Exercises](#Exercises)
-4.  [MERN](#MERN)
+4.  [004-sunstripe](004-sunstripe)
+5.  [MERN](#MERN)
+6.  [005-maskparty-invitation](#005-maskparty-invitation)
 
 
-  
 ## 001-to-do-list
 
 The "001-to-do-list" project is a task list developed using React. This application allows users to create, edit, and delete tasks as needed. With its intuitive and user-friendly interface, managing tasks becomes a breeze.
@@ -21,9 +23,6 @@ The "002-weather-app" project is an application that displays weather informatio
 
 ## 003-linkedin-learning
 The "003-linkedin-learning" project is a collection of exercises completed throughout the React course on LinkedIn Learning. These exercises showcase my progress and learning in application development using React. Explore this project to see how I've applied the concepts and techniques taught in the course.
-
-## MERN
-This is a work-in-progress application that utilizes the MERN stack (MongoDB, Express, React, and Node.js) to create a comprehensive web development experience.
 
 ### Exercises
 
@@ -39,7 +38,17 @@ This is a work-in-progress application that utilizes the MERN stack (MongoDB, Ex
 | 008-shopping-cart       | In this exercise, I implemented a shopping cart application using React, allowing users to add and remove items from their cart. |
 | 009-rock-paper-scissors | Here, I built a rock-paper-scissors game using React, where users can play against the computer and see the results. |
 
+## MERN
+This is a work-in-progress application that utilizes the MERN stack (MongoDB, Express, React, and Node.js) to create a comprehensive web development experience.
 
+## 004-sunstripe
+
+Personal project to start using MERN on it.
+
+## 005-maskparty-invitation
+
+It is a small personal project for a person who wanted to make a simple invitation in web format
+ 
 Feel free to explore these projects and witness my journey in front-end development!
 
 ---
