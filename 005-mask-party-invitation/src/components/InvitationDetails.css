@@ -13,7 +13,6 @@
 .invitation-detail {
     display: flex;
     flex-direction: column;
-    /* Cambio de dirección para poner etiquetas encima del contenido */
     align-items: center;
     margin-bottom: 10px;
 }
@@ -21,7 +20,6 @@
 .detail-label {
     font-weight: bold;
     margin-bottom: 5px;
-    /* Espacio entre etiquetas y contenido */
 }
 
 .detail-content {
@@ -41,16 +39,61 @@
     background-color: #0056b3;
 }
 
-.google-maps-icon {
-    width: 24px;
-    height: 24px;
-    margin-left: 10px;
-}
-
 .special-number {
     font-size: 3rem;
     color: #ff6600;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     margin: 0;
     padding: 0;
+}
+
+.img {
+    width: 100px;
+    height: auto;
+    margin-top: 20px;
+}
+
+.countdown {
+    margin-top: 20px;
+}
+
+.countdown-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.countdown-content {
+    margin: 0;
+}
+
+/* src/components/InvitationDetails.css */
+/* ... (otros estilos) */
+
+.time-squares {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.time-square {
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.time-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    color: black;
+}
+
+.time-label {
+    font-size: 0.8rem;
+    margin: 5px 0;
+    color: black;
 }

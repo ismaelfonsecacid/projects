@@ -1,9 +1,35 @@
 // src/components/InvitationDetails.js
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './InvitationDetails.css';
 
 function InvitationDetails() {
     const eventDate = new Date('2023-11-04T00:00:00'); // Cambia la fecha a la correcta
+
+
+    const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining());
+
+    function calculateTimeRemaining() {
+        const now = new Date();
+        const timeDiff = eventDate - now;
+        const hours = Math.floor(timeDiff / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+        return {
+            hours,
+            minutes,
+            seconds,
+        };
+    }
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setTimeRemaining(calculateTimeRemaining());
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, []);
+
 
     const generateGoogleCalendarLink = () => {
         const startTime = eventDate.toISOString().replace(/-|:|\.\d+/g, '');
@@ -47,6 +73,26 @@ function InvitationDetails() {
             <div className="invitation-detail">
                 <div className="detail-label">Obligatorio:</div>
                 <div className="detail-content">Máscara</div>
+            </div>
+            <div>
+                <img src='/img/mask.jpg' className='img' alt="Máscara" />
+            </div>
+            <div className="countdown">
+                <p className="countdown-label">Tiempo restante:</p>
+                <div className="time-squares">
+                    <div className="time-square">
+                        <p className="time-number">{timeRemaining.hours}</p>
+                        <p className="time-label">Horas</p>
+                    </div>
+                    <div className="time-square">
+                        <p className="time-number">{timeRemaining.minutes}</p>
+                        <p className="time-label">Minutos</p>
+                    </div>
+                    <div className="time-square">
+                        <p className="time-number">{timeRemaining.seconds}</p>
+                        <p className="time-label">Segundos</p>
+                    </div>
+                </div>
             </div>
         </div>
     );
