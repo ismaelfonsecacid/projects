@@ -79,8 +79,8 @@ function InvitationDetails() {
                 <div className="detail-content">Calle Santa Barbara</div>
             </div>
             <div className="invitation-detail">
-                <div className="detail-label">Vestimenta:</div>
-                <div className="detail-content">Blanco y Negro</div>
+                <div className="detail-label">Dresscode :</div>
+                <div className="detail-content">Blanco o Negro</div>
             </div>
             <div className="invitation-title">
                 <h1 className="special-number">20</h1>
