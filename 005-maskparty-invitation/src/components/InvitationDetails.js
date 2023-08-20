@@ -18,13 +18,11 @@ function InvitationDetails() {
         const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
         const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
         return {
             days,
             hours,
             minutes,
-            seconds,
         };
     }
 
@@ -108,10 +106,6 @@ function InvitationDetails() {
                     <div className="time-square">
                         <p className="time-number">{timeRemaining.minutes}</p>
                         <p className="time-label">Minutos</p>
-                    </div>
-                    <div className="time-square">
-                        <p className="time-number">{timeRemaining.seconds}</p>
-                        <p className="time-label">Segundos</p>
                     </div>
                 </div>
             </div>
