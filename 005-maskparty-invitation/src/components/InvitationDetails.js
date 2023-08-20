@@ -39,8 +39,8 @@ function InvitationDetails() {
             setShowAutoConfetti(true);
             setTimeout(() => {
                 setShowAutoConfetti(false);
-            }, 3000); // Oculta el confeti automático después de 3 segundos
-        }, 10000); // Activa el confeti automático cada 10 segundos
+            }, 4000); // Oculta el confeti automático después de 3 segundos
+        }, 7000); // Activa el confeti automático cada 10 segundos
 
         return () => clearInterval(autoConfettiTimer);
     }, []);
