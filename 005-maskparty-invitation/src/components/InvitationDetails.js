@@ -84,7 +84,7 @@ function InvitationDetails() {
             </div>
             <div className="invitation-title">
                 <h1 className="special-number">20</h1>
-                <h1 className="special-number">AÑOS</h1>
+                <h1 className="special-number" style={{ marginBottom: '20px' }}>AÑOS</h1>
             </div>
             <div className="invitation-detail">
                 <div className="detail-label">Obligatorio el uso de máscaras</div>
