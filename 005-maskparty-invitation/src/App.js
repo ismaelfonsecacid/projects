@@ -11,7 +11,7 @@ function App() {
     // Mostrar el componente Header durante 4 segundos y luego cambiar a InvitationDetails
     const timer = setTimeout(() => {
       setShowHeader(false);
-    }, 4000);
+    }, 400000);
 
     return () => clearTimeout(timer); // Limpiar el temporizador si el componente se desmonta antes de que termine
 
@@ -22,6 +22,7 @@ function App() {
       {showHeader ? (
         <Header />
       ) : (
+
         <div className='marco'>
           <InvitationDetails />
         </div>
