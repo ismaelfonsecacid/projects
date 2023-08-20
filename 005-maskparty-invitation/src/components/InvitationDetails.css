@@ -20,6 +20,8 @@
 .detail-label {
     font-weight: bold;
     margin-bottom: 5px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 36px;
 }
 
 .detail-content {
