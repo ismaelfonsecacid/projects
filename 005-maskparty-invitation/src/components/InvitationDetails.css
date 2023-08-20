@@ -55,6 +55,7 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     margin: 0;
     padding: 0;
+    animation: shine 2s infinite;
 
 }
 
@@ -107,4 +108,16 @@
     font-size: 0.8rem;
     margin: 5px 0;
     color: black;
+}
+
+@keyframes shine {
+
+    0%,
+    100% {
+        text-shadow: 0 0 10px #D2B48C, 0 0 20px #D2B48C, 0 0 30px #D2B48C;
+    }
+
+    50% {
+        text-shadow: none;
+    }
 }
