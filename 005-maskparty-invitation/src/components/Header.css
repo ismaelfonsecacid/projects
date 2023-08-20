@@ -37,3 +37,9 @@
     color: white;
     animation: shine 2s infinite;
 }
+
+.letter-title {
+    font-family: 'Amatic SC', cursive;
+    font-size: 70px;
+    color: white;
+}

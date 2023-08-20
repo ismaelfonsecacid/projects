@@ -8,7 +8,7 @@ function Header() {
             <header className="header">
                 <div><img src='/img/mask2.png' style={{ width: '200px', marginLeft: '5%' }} /></div>
                 <h1 className="golden-title">Fiesta de máscaras</h1>
-                <h1 className="golden-title">Felices 20</h1>
+                <h1 className="letter-title">Felices Veinte</h1>
             </header>
         </>
 
