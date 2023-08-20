@@ -22,10 +22,13 @@
     margin-bottom: 5px;
     font-family: 'Great Vibes', cursive;
     font-size: 28px;
+
 }
 
 .detail-content {
     margin: 0;
+    font-family: 'Amatic SC', cursive;
+    font-size: 28px;
 }
 
 .add-to-calendar-button {
