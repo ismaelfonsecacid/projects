@@ -1,42 +1,54 @@
 // src/components/InvitationDetails.js
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './InvitationDetails.css';
 
 function InvitationDetails() {
-    const eventDate = new Date('2023-11-04T19:00:00'); // Fecha del evento
-    const [timeRemaining, setTimeRemaining] = useState('');
+    const eventDate = new Date('2023-11-04T00:00:00'); // Cambia la fecha a la correcta
 
-    useEffect(() => {
-        const calculateTimeRemaining = () => {
-            const now = new Date();
-            const timeDifference = eventDate - now;
+    const generateGoogleCalendarLink = () => {
+        const startTime = eventDate.toISOString().replace(/-|:|\.\d+/g, '');
+        const endTime = new Date(eventDate.getTime() + (2 * 60 * 60 * 1000))
+            .toISOString()
+            .replace(/-|:|\.\d+/g, '');
 
-            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-
-            setTimeRemaining(`${days}${hours}${minutes}`);
+        const eventDetails = {
+            text: 'Cumpleaños de Sara',
+            details: '¡Ven a celebrar el cumpleaños de Sara con nosotros!',
+            location: 'Calle Santa Barbara',
+            dates: `${startTime}/${endTime}`,
         };
 
-        const interval = setInterval(calculateTimeRemaining, 1000);
+        const calendarLink = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventDetails.text)}&details=${encodeURIComponent(eventDetails.details)}&location=${encodeURIComponent(eventDetails.location)}&dates=${eventDetails.dates}`;
 
-        calculateTimeRemaining(); // Calcular inicialmente
-
-        return () => {
-            clearInterval(interval);
-        };
-    }, []);
+        window.open(calendarLink, '_blank');
+    };
 
     return (
-        <section className="invitation-details">
-            <h2>Detalles del Evento</h2>
-            <p>¡Te invitamos a una fiesta de cumpleaños en temática de máscaras!</p>
-            <p>Fecha: 4 de Noviembre</p>
-            <p>Hora: 7:00 PM</p>
-            <p>Lugar: Dirección del lugar</p>
-            <p>{timeRemaining}</p>
-        </section>
+        <div className="invitation-details-container">
+            <div className="invitation-detail">
+                <div className="detail-label">Fecha:</div>
+                <div className="detail-content">4 de Noviembre</div>
+                <button className="add-to-calendar-button" onClick={generateGoogleCalendarLink}>
+                    Añadir a Google Calendar
+                </button>
+            </div>
+            <div className="invitation-detail">
+                <div className="detail-label">Lugar:</div>
+                <div className="detail-content">Calle Santa Barbara</div>
+            </div>
+            <div className="invitation-detail">
+                <div className="detail-label">Vestimenta:</div>
+                <div className="detail-content">Blanco y Negro</div>
+            </div>
+            <div className="invitation-title">
+                <h1 className="special-number">20</h1>
+                <h1 className="special-number">AÑOS</h1>
+            </div>
+            <div className="invitation-detail">
+                <div className="detail-label">Obligatorio:</div>
+                <div className="detail-content">Máscara</div>
+            </div>
+        </div>
     );
 }
 

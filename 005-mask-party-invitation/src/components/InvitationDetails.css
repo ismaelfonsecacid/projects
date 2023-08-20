@@ -1,18 +1,56 @@
 /* src/components/InvitationDetails.css */
-.invitation-details {
-    background-color: white;
-    color: black;
-    padding: 2rem;
-    margin: 2rem;
-    border-radius: 10px;
-    text-align: left;
+.invitation-details-container {
+    text-align: center;
+    margin: auto;
+    width: 70%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    color: white;
 }
 
-.invitation-details h2 {
-    color: black;
+.invitation-detail {
+    display: flex;
+    flex-direction: column;
+    /* Cambio de dirección para poner etiquetas encima del contenido */
+    align-items: center;
+    margin-bottom: 10px;
 }
 
-.invitation-details p {
-    margin: 1rem 0;
-    font-size: 1.2rem;
+.detail-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    /* Espacio entre etiquetas y contenido */
+}
+
+.detail-content {
+    margin: 0;
+}
+
+.add-to-calendar-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-to-calendar-button:hover {
+    background-color: #0056b3;
+}
+
+.google-maps-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+.special-number {
+    font-size: 3rem;
+    color: #ff6600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0;
+    padding: 0;
 }
