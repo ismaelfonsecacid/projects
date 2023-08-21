@@ -1,7 +1,7 @@
 import React from 'react'
 import { Form } from "semantic-ui-react";
 import { useFormik } from 'formik'
-import { Auth } from '../../../../api/auth'
+import { Auth } from '../../../../api'
 import { initialValues, validationSchema } from './LoginForm.form'
 import { useAuth } from "../../../../hooks";
 
@@ -17,7 +17,9 @@ export default function LoginForm() {
         validateOnChange: false,
         onSubmit: async (formValue) => {
             try {
-                const response = await authController.login(formValue)
+                const response = await authController.login(formValue);
+                authController.setAccesToken(response.access)
+                authController.setRefreshToken(response.refresh)
                 login(response.access)
 
 
