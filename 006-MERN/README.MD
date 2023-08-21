@@ -1,32 +1,11 @@
 # Mi Aplicación MERN
-
-````html
-<div style="width: 100%; background-color: #eee;">
-  <div id="progress-bar" style="width: 0%; height: 20px; background-color: #007bff;"></div>
-</div>
-
-<script>
-  function updateProgressBar(progress) {
-    const progressBar = document.getElementById("progress-bar");
-    progressBar.style.width = progress + "%";
-  }
-
-  // Ejemplo de actualización de la barra de progreso cada 2 segundos
-  let currentProgress = 0;
-  const interval = setInterval(() => {
-    currentProgress += 10;
-    if (currentProgress <= 100) {
-      updateProgressBar(currentProgress);
-    } else {
-      clearInterval(interval);
-    }
-  }, 2000);
-</script>
-
-
 ¡Bienvenido a mi aplicación MERN!
 
 Esta es una aplicación en desarrollo que utiliza la pila MERN (MongoDB, Express, React y Node.js) para crear una experiencia completa de desarrollo web.
+## Progreso
+
+Progress: ▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░ 40%
+
 
 ## Características
 
