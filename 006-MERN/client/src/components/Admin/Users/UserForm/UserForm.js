@@ -1,10 +1,19 @@
 import React from "react";
+import { useCallback } from "react";
 import { Form, Image } from "semantic-ui-react";
 import { useFormik } from "formik";
+import { image } from "../../../../assets/";
 import { initialValues, validationSchema } from "./UserForm.form";
+import { useDropzone } from "react-dropzone";
+import { User } from "../../../../api";
+import { useAuth } from "../../../../hooks";
+import "./UserForm.scss";
+
+const userController = new User();
 
 export default function UserForm(props) {
 	const { close, onReload, user } = props;
+	const { accessToken } = useAuth();
 
 	const formik = useFormik({
 		initialValues: initialValues(),
@@ -12,15 +21,38 @@ export default function UserForm(props) {
 		validateOnChange: false,
 		onSubmit: async (formValue) => {
 			try {
-				console.log(formValue);
+				await userController.createUser(accessToken, formValue);
+				close();
 			} catch (error) {
 				throw error;
 			}
 		},
 	});
+
+	const onDrop = useCallback((acceptedFiles) => {
+		const file = acceptedFiles[0];
+		formik.setFieldValue("avatar", URL.createObjectURL(file));
+		formik.setFieldValue("fileAvatar", file);
+	});
+
+	const { getRootProps, getInputProps } = useDropzone({
+		accept: "image/jpeg, image/png",
+		onDrop,
+	});
+
+	const getAvatar = () => {
+		if (formik.values.fileAvatar) {
+			return formik.values.avatar;
+		}
+		return image.noAvatar;
+	};
+
 	return (
 		<Form className="user-form" onSubmit={formik.handleSubmit}>
-			<div className="user-form__avatar">AVATAR</div>
+			<div className="user-form__avatar" {...getRootProps()}>
+				<input {...getInputProps} />
+				<Image avatar size="small" src={getAvatar()} />
+			</div>
 			<Form.Group width="equal">
 				<Form.Input
 					name="firstname"
