@@ -9,8 +9,8 @@ Welcome to my GitHub repository! Here, you'll find my early React projects, show
 3.  [003-linkedin-learning](#003-linkedin-learning)
       - [Exercises](#Exercises)
 4.  [004-sunstripe](004-sunstripe)
-5.  [MERN](#MERN)
-6.  [005-maskparty-invitation](#005-maskparty-invitation)
+5.  [005-maskparty-invitation](#005-maskparty-invitation)
+6.  [006-MERN](#006-MERN)
 
 
 ## 001-to-do-list
@@ -38,9 +38,6 @@ The "003-linkedin-learning" project is a collection of exercises completed throu
 | 008-shopping-cart       | In this exercise, I implemented a shopping cart application using React, allowing users to add and remove items from their cart. |
 | 009-rock-paper-scissors | Here, I built a rock-paper-scissors game using React, where users can play against the computer and see the results. |
 
-## MERN
-This is a work-in-progress application that utilizes the MERN stack (MongoDB, Express, React, and Node.js) to create a comprehensive web development experience.
-
 ## 004-sunstripe
 
 Personal project to start using MERN on it.
@@ -48,6 +45,10 @@ Personal project to start using MERN on it.
 ## 005-maskparty-invitation
 
 It is a small personal project for a person who wanted to make a simple invitation in web format
+
+## 006-MERN
+This is a work-in-progress application that utilizes the MERN stack (MongoDB, Express, React, and Node.js) to create a comprehensive web development experience.
+
  
 Feel free to explore these projects and witness my journey in front-end development!
 

@@ -12,29 +12,34 @@ export function AuthProvider(props) {
     const [token, setToken] = useState(null)
     const [loading, setLoading] = useState(true)
 
-    useEffect(async () => {
-        const accessToken = authController.getAccessToken();
-        const refreshToken = authController.getRefreshToken();
+    useEffect(() => {
+        const fetchData = async () => {
+            const accessToken = authController.getAccessToken();
+            const refreshToken = authController.getRefreshToken();
 
-        if (!accessToken || !refreshToken) {
-            Logout();
-            setLoading(false)
-            return;
-        }
-
-        if (hasExpiredToken(accessToken)) {
-            //Ha caducado
-            if (hasExpiredToken(refreshToken)) {
+            if (!accessToken || !refreshToken) {
                 Logout();
-            } else {
-                await reLogin(refreshToken)
+                setLoading(false);
+                return;
             }
-        } else {
-            await login(accessToken)
-        }
 
-        setLoading(false);
+            if (hasExpiredToken(accessToken)) {
+                // Ha caducado
+                if (hasExpiredToken(refreshToken)) {
+                    Logout();
+                } else {
+                    await reLogin(refreshToken);
+                }
+            } else {
+                await login(accessToken);
+            }
+
+            setLoading(false);
+        };
+
+        fetchData();
     }, []);
+
 
 
     const reLogin = async (refreshToken) => {
