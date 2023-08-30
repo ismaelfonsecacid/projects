@@ -7,9 +7,14 @@ import { UserForm, ListUsers } from "../../../components/Admin";
 
 export default function Users() {
 	const [showModal, setShowModal] = useState(false);
+	const [reload, setreload] = useState(false);
 
 	const onOpenCloseModal = () => {
 		setShowModal((prevState) => !prevState);
+	};
+
+	const onReload = () => {
+		setreload((prevState) => !prevState);
 	};
 
 	const panes = [
@@ -17,7 +22,7 @@ export default function Users() {
 			menuItem: "Usuarios activos",
 			render: () => (
 				<Tab.Pane attached={false}>
-					<ListUsers usersActive={true} />
+					<ListUsers usersActive={true} reload={reload} />
 				</Tab.Pane>
 			),
 		},
@@ -25,7 +30,7 @@ export default function Users() {
 			menuItem: "Usuarios inactivos",
 			render: () => (
 				<Tab.Pane attached={false}>
-					<ListUsers usersActive={false} />
+					<ListUsers usersActive={false} reload={reload} />
 				</Tab.Pane>
 			),
 		},
@@ -45,7 +50,7 @@ export default function Users() {
 				title={"Crear nuevo usuario"}
 				close={onOpenCloseModal}
 			>
-				<UserForm close={onOpenCloseModal} />
+				<UserForm close={onOpenCloseModal} onReload={onReload} />
 			</BasicModal>
 		</>
 	);

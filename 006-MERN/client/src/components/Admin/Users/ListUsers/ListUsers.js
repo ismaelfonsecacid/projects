@@ -7,7 +7,7 @@ import { UserItem } from "../UserItem";
 
 export default function ListUsers(props) {
 	const userController = new User();
-	const { usersActive } = props;
+	const { usersActive, reload } = props;
 	const [users, setUsers] = useState(null);
 	const { accessToken } = useAuth();
 
@@ -24,7 +24,7 @@ export default function ListUsers(props) {
 				setUsers(response);
 			} catch (error) {}
 		})();
-	}, [usersActive]); // Include dependencies in the dependency array
+	}, [usersActive, reload]); // Include dependencies in the dependency array
 
 	if (!users) return <Loader active inline="centered" />;
 	if (size(users) === 0) return "No hay ningun usuario";
