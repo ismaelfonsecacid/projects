@@ -14,7 +14,11 @@ class User {
 			const response = await fetch(url, params);
 			const result = await response.json();
 
+<<<<<<< HEAD
 			if (response.status !== 201) throw result;
+=======
+			if (response.status !== 200) throw result;
+>>>>>>> pruebaLogin
 
 			return result;
 		} catch (error) {
@@ -45,7 +49,8 @@ class User {
 			const response = await fetch(url, params);
 			const result = await response.json();
 
-			if (response.status !== 200) throw result;
+			if (response.status !== 201) throw result;
+
 
 			return result;
 		} catch (error) {
