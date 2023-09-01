@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { size } from "lodash";
+import { size, map } from "lodash";
 import { Loader } from "semantic-ui-react";
 import { Menu } from "../../../../api";
+import { MenuItem } from "../MenuItem";
 
 export default function ListMenu(props) {
 	const menuController = new Menu();
@@ -22,9 +23,6 @@ export default function ListMenu(props) {
 
 	if (!menus) return <Loader active inline="centered" />;
 	if (size(menus) === 0) return "No hay ningun menu";
-	return (
-		<div>
-			<h2>List menu</h2>
-		</div>
-	);
+
+	return map(menus, (menu) => <MenuItem key={menu._id} menu={menu} />);
 }
