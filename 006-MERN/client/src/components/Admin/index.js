@@ -6,6 +6,7 @@ import { Logout } from "./AdminLayout/Logout";
 import { UserForm } from "./Users/UserForm";
 import { ListUsers } from "./Users/ListUsers";
 import { UserItem } from "./Users/UserItem";
+import { ListMenu } from "./Menu/ListMenu";
 
 export {
 	RegisterForm,
@@ -15,4 +16,5 @@ export {
 	Logout,
 	ListUsers,
 	UserItem,
+	ListMenu,
 };
