@@ -4,7 +4,7 @@
 Esta es una aplicación en desarrollo que utiliza la pila MERN (MongoDB, Express, React y Node.js) para crear una experiencia completa de desarrollo web.
 ## Progreso
 
-Progress: ▓▓▓▓▓▓░░░░░░░░░░░░ 43%
+Progress: ▓▓▓▓▓▓▓▓░░░░░░░░░░░░ 48%
 
 
 ## Características
