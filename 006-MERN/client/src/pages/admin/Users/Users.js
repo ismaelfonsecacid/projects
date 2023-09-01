@@ -22,7 +22,7 @@ export default function Users() {
 			menuItem: "Usuarios activos",
 			render: () => (
 				<Tab.Pane attached={false}>
-					<ListUsers usersActive={true} reload={reload} />
+					<ListUsers usersActive={true} reload={reload} onReload={onReload} />
 				</Tab.Pane>
 			),
 		},
@@ -30,7 +30,7 @@ export default function Users() {
 			menuItem: "Usuarios inactivos",
 			render: () => (
 				<Tab.Pane attached={false}>
-					<ListUsers usersActive={false} reload={reload} />
+					<ListUsers usersActive={false} reload={reload} onReload={onReload} />
 				</Tab.Pane>
 			),
 		},
