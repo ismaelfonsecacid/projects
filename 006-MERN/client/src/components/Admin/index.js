@@ -7,6 +7,8 @@ import { UserForm } from "./Users/UserForm";
 import { ListUsers } from "./Users/ListUsers";
 import { UserItem } from "./Users/UserItem";
 import { ListMenu } from "./Menu/ListMenu";
+import { MenuItem } from "./Menu/MenuItem";
+import { MenuForm } from "./Menu/MenuForm";
 
 export {
 	RegisterForm,
@@ -17,4 +19,6 @@ export {
 	ListUsers,
 	UserItem,
 	ListMenu,
+	MenuItem,
+	MenuForm,
 };
