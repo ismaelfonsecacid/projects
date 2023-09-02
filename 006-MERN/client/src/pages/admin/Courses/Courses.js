@@ -1,9 +1,28 @@
-import React from 'react'
+import React, { useState } from "react";
+import { Tab, Button } from "semantic-ui-react";
+import { BasicModal } from "../../../components/Shared";
+import "./Courses.scss";
 
 export default function Courses() {
-    return (
-        <div>
-            <h1>Estamos en los cursos</h1>
-        </div>
-    )
+	const [showModal, setShowModal] = useState(false);
+
+	const onOpenCloseModal = () => setShowModal((prevState) => !prevState);
+	return (
+		<>
+			<div className="courses-page">
+				<div className="courses-page__add">
+					<Button primary onClick={onOpenCloseModal}>
+						Nuevo Curso
+					</Button>
+				</div>
+				<Tab.Pane attached={false}>
+					<p>Lista de cursos</p>
+				</Tab.Pane>
+			</div>
+
+			<BasicModal show={showModal} close={onOpenCloseModal} title="Crear Curso">
+				<p>Formulario para crear un curso</p>
+			</BasicModal>
+		</>
+	);
 }

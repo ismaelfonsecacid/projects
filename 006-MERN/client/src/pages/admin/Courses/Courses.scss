@@ -1,0 +1,12 @@
+.courses-page {
+
+    &__add {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 10px;
+
+        >.ui.button {
+            margin: 0;
+        }
+    }
+}
