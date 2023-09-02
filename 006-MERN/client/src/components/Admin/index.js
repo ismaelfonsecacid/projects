@@ -11,6 +11,7 @@ import { MenuItem } from "./Menu/MenuItem";
 import { MenuForm } from "./Menu/MenuForm";
 import { ListCourses } from "./Course/ListCourses";
 import { CourseItem } from "./Course/CourseItem";
+import { CourseForm } from "./Course/CourseForm";
 
 export {
 	RegisterForm,
@@ -25,4 +26,5 @@ export {
 	MenuForm,
 	ListCourses,
 	CourseItem,
+	CourseForm,
 };
