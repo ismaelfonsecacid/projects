@@ -9,6 +9,8 @@ import { UserItem } from "./Users/UserItem";
 import { ListMenu } from "./Menu/ListMenu";
 import { MenuItem } from "./Menu/MenuItem";
 import { MenuForm } from "./Menu/MenuForm";
+import { ListCourses } from "./Course/ListCourses";
+import { CourseItem } from "./Course/CourseItem";
 
 export {
 	RegisterForm,
@@ -21,4 +23,6 @@ export {
 	ListMenu,
 	MenuItem,
 	MenuForm,
+	ListCourses,
+	CourseItem,
 };
