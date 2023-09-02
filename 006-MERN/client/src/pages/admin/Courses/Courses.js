@@ -7,8 +7,10 @@ import "./Courses.scss";
 
 export default function Courses() {
 	const [showModal, setShowModal] = useState(false);
+	const [reload, setReload] = useState(false);
 
 	const onOpenCloseModal = () => setShowModal((prevState) => !prevState);
+	const onReload = () => setReload((prevState) => !prevState);
 	return (
 		<>
 			<div className="courses-page">
@@ -18,12 +20,12 @@ export default function Courses() {
 					</Button>
 				</div>
 				<Tab.Pane attached={false}>
-					<ListCourses />
+					<ListCourses reload={reload} onReload={onReload} />
 				</Tab.Pane>
 			</div>
 
 			<BasicModal show={showModal} close={onOpenCloseModal} title="Crear Curso">
-				<CourseForm onClose={onOpenCloseModal} />
+				<CourseForm onClose={onOpenCloseModal} onReload={onReload} />
 			</BasicModal>
 		</>
 	);

@@ -5,7 +5,8 @@ import { Loader, Pagination } from "semantic-ui-react";
 import { CourseItem } from "../CourseItem";
 import "./ListCourses.scss";
 
-export default function ListCourses() {
+export default function ListCourses(props) {
+	const { reload, onReload } = props;
 	const courseController = new Course();
 	const [courses, setCourses] = useState(false);
 	const [page, setPage] = useState(1);
@@ -27,7 +28,7 @@ export default function ListCourses() {
 				throw error;
 			}
 		})();
-	}, [page]);
+	}, [page, reload]);
 
 	const changePage = (_, data) => {
 		setPage(data.activePage);
@@ -39,7 +40,7 @@ export default function ListCourses() {
 	return (
 		<div className="list-courses">
 			{map(courses, (course) => (
-				<CourseItem key={course._id} course={course} />
+				<CourseItem key={course._id} course={course} onReload={onReload} />
 			))}
 
 			<div className="list-courses__pagination">
