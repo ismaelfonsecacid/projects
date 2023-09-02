@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Tab, Button } from "semantic-ui-react";
 import { BasicModal } from "../../../components/Shared";
+import { ListCourses } from "../../../components/Admin/";
 import "./Courses.scss";
 
 export default function Courses() {
@@ -16,7 +17,7 @@ export default function Courses() {
 					</Button>
 				</div>
 				<Tab.Pane attached={false}>
-					<p>Lista de cursos</p>
+					<ListCourses />
 				</Tab.Pane>
 			</div>
 
