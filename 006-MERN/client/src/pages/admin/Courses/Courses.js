@@ -11,20 +11,30 @@ export default function Courses() {
 
 	const onOpenCloseModal = () => setShowModal((prevState) => !prevState);
 	const onReload = () => setReload((prevState) => !prevState);
+
+	const panes = [
+		{
+			render: () => (
+				<Tab.Pane attached={false}>
+					<ListCourses reload={reload} onReload={onReload} />
+				</Tab.Pane>
+			),
+		},
+	];
+
 	return (
 		<>
 			<div className="courses-page">
 				<div className="courses-page__add">
 					<Button primary onClick={onOpenCloseModal}>
-						Nuevo Curso
+						Nuevo curso
 					</Button>
 				</div>
-				<Tab.Pane attached={false}>
-					<ListCourses reload={reload} onReload={onReload} />
-				</Tab.Pane>
+
+				<Tab menu={{ secondary: true }} panes={panes} />
 			</div>
 
-			<BasicModal show={showModal} close={onOpenCloseModal} title="Crear Curso">
+			<BasicModal show={showModal} close={onOpenCloseModal} title="Crear curso">
 				<CourseForm onClose={onOpenCloseModal} onReload={onReload} />
 			</BasicModal>
 		</>

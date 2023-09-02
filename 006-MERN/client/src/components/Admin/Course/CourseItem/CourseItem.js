@@ -4,20 +4,36 @@ import { BasicModal } from "../../../Shared";
 import "./CourseItem.scss";
 import { ENV } from "../../../../utils";
 import { CourseForm } from "../CourseForm";
+import { useAuth } from "../../../../hooks";
+import { Course } from "../../../../api";
 
-export default function (props) {
+const courseController = new Course();
+
+export default function CourseItem(props) {
+	const { course, onReload } = props;
 	const [showModal, setShowModal] = useState(false);
 	const [titleModal, setTitleModal] = useState("");
+	const [showConfirm, setShowConfirm] = useState(false);
+	const { accessToken } = useAuth();
 
 	const onOpenCloseModal = () => setShowModal((prevState) => !prevState);
+	const onOpenCloseConfirm = () => setShowConfirm((prevState) => !prevState);
 
 	const openUpdateCourse = () => {
-		setTitleModal(`Actualizar ${course.title} `);
+		setTitleModal(`Actualizar ${course.title}`);
 		onOpenCloseModal();
 	};
 
-	const { course, onReload } = props;
-	console.log(course);
+	const onDelete = async () => {
+		try {
+			await courseController.deleteCourse(accessToken, course._id);
+			onReload();
+			onOpenCloseConfirm();
+		} catch (error) {
+			console.error(error);
+		}
+	};
+
 	return (
 		<>
 			<div className="course-item">
@@ -35,7 +51,7 @@ export default function (props) {
 					<Button icon primary onClick={openUpdateCourse}>
 						<Icon name="pencil" />
 					</Button>
-					<Button icon color="red">
+					<Button icon color="red" onClick={onOpenCloseConfirm}>
 						<Icon name="trash" />
 					</Button>
 				</div>
@@ -44,10 +60,18 @@ export default function (props) {
 			<BasicModal show={showModal} close={onOpenCloseModal} title={titleModal}>
 				<CourseForm
 					onClose={onOpenCloseModal}
-					course={course}
 					onReload={onReload}
+					course={course}
 				/>
 			</BasicModal>
+
+			<Confirm
+				open={showConfirm}
+				onCancel={onOpenCloseConfirm}
+				onConfirm={onDelete}
+				content={`Eliminar el curso ${course.title}`}
+				size="mini"
+			/>
 		</>
 	);
 }

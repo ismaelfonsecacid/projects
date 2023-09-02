@@ -2,13 +2,13 @@ import * as Yup from "yup";
 
 export function initialValues(course) {
 	return {
-		title: course.title || "",
-		miniature: course.miniature || "",
+		title: course?.title || "",
+		miniature: course?.miniature || "",
 		file: null,
-		description: course.description || "",
-		url: course.url || "",
-		price: course.price || undefined,
-		score: course.score || undefined,
+		description: course?.description || "",
+		url: course?.url || "",
+		price: course?.price || "",
+		score: course?.score || "",
 	};
 }
 

@@ -4,10 +4,10 @@ import { size, map } from "lodash";
 import { Loader, Pagination } from "semantic-ui-react";
 import { CourseItem } from "../CourseItem";
 import "./ListCourses.scss";
+const courseController = new Course();
 
 export default function ListCourses(props) {
 	const { reload, onReload } = props;
-	const courseController = new Course();
 	const [courses, setCourses] = useState(false);
 	const [page, setPage] = useState(1);
 	const [pagination, setPagination] = useState();
@@ -16,7 +16,6 @@ export default function ListCourses(props) {
 		(async () => {
 			try {
 				const response = await courseController.getCourses({ page });
-
 				setCourses(response.docs);
 				setPagination({
 					limit: response.limit,
@@ -25,7 +24,7 @@ export default function ListCourses(props) {
 					total: response.total,
 				});
 			} catch (error) {
-				throw error;
+				console.error(error);
 			}
 		})();
 	}, [page, reload]);
@@ -35,7 +34,7 @@ export default function ListCourses(props) {
 	};
 
 	if (!courses) return <Loader active inline="centered" />;
-	if (size(courses) === 0) return "No hay cursos";
+	if (size(courses) === 0) return "No hay ningun curso";
 
 	return (
 		<div className="list-courses">

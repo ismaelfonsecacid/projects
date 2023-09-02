@@ -8,16 +8,42 @@ import { Course } from "../../../../api";
 import { useAuth } from "../../../../hooks";
 import { ENV } from "../../../../utils";
 
+const courseController = new Course();
+
 export default function CourseForm(props) {
-	const { accessToken } = useAuth();
 	const { onClose, onReload, course } = props;
-	console.log(course);
-	const courseController = new Course();
+	const { accessToken } = useAuth();
+
+	const formik = useFormik({
+		initialValues: initialValues(course),
+		validationSchema: validationSchema(),
+		validateOnChange: false,
+		onSubmit: async (formValue) => {
+			try {
+				if (!course) {
+					await courseController.createCourse(accessToken, formValue);
+				} else {
+					await courseController.updateCourse(
+						accessToken,
+						course._id,
+						formValue
+					);
+				}
+
+				onReload();
+				onClose();
+			} catch (error) {
+				console.error(error);
+			}
+		},
+	});
+
 	const onDrop = useCallback((acceptedFiles) => {
 		const file = acceptedFiles[0];
 		formik.setFieldValue("miniature", URL.createObjectURL(file));
 		formik.setFieldValue("file", file);
 	});
+
 	const { getRootProps, getInputProps } = useDropzone({
 		accept: "image/jpeg, image/png",
 		onDrop,
@@ -32,28 +58,6 @@ export default function CourseForm(props) {
 		return null;
 	};
 
-	const formik = useFormik({
-		initialValues: initialValues(),
-		validationSchema: validationSchema(),
-		validateOnChange: false,
-		onSubmit: async (formValue) => {
-			try {
-				if (!course) {
-					await courseController.createCourse(accessToken, formValue);
-				} else {
-					await courseController.updateCourse(
-						accessToken,
-						course._id,
-						formValue
-					);
-				}
-				onReload();
-				onClose();
-			} catch (error) {
-				throw error;
-			}
-		},
-	});
 	return (
 		<Form className="course-form" onSubmit={formik.handleSubmit}>
 			<div className="course-form__miniature" {...getRootProps()}>
@@ -69,21 +73,21 @@ export default function CourseForm(props) {
 
 			<Form.Input
 				name="title"
-				placeholder="ncurso"
+				placeholder="Nombre del curso"
 				onChange={formik.handleChange}
 				value={formik.values.title}
 				error={formik.errors.title}
 			/>
 			<Form.Input
 				name="url"
-				placeholder="link"
+				placeholder="Link del curso"
 				onChange={formik.handleChange}
 				value={formik.values.url}
 				error={formik.errors.url}
 			/>
 			<Form.TextArea
 				name="description"
-				placeholder="Small desc"
+				placeholder="Pequeña descripción del curso"
 				onChange={formik.handleChange}
 				value={formik.values.description}
 				error={formik.errors.description}
@@ -92,16 +96,16 @@ export default function CourseForm(props) {
 			<Form.Group widths="equal">
 				<Form.Input
 					type="number"
-					placeholder="Precio"
 					name="price"
+					placeholder="Precio del curso"
 					onChange={formik.handleChange}
 					value={formik.values.price}
 					error={formik.errors.price}
 				/>
 				<Form.Input
 					type="number"
-					placeholder="Puntuacion del curso"
 					name="score"
+					placeholder="Puntuacion del curso"
 					onChange={formik.handleChange}
 					value={formik.values.score}
 					error={formik.errors.score}
