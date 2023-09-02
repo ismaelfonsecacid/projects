@@ -12,7 +12,7 @@ import { MenuForm } from "./Menu/MenuForm";
 import { ListCourses } from "./Course/ListCourses";
 import { CourseItem } from "./Course/CourseItem";
 import { CourseForm } from "./Course/CourseForm";
-
+import { ListEmails } from "./Newsletter/ListEmails";
 export {
 	RegisterForm,
 	UserForm,
@@ -27,4 +27,5 @@ export {
 	ListCourses,
 	CourseItem,
 	CourseForm,
+	ListEmails,
 };
