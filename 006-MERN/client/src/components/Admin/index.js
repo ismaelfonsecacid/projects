@@ -13,6 +13,7 @@ import { ListCourses } from "./Course/ListCourses";
 import { CourseItem } from "./Course/CourseItem";
 import { CourseForm } from "./Course/CourseForm";
 import { ListEmails } from "./Newsletter/ListEmails";
+import { EmailItem } from "./Newsletter/EmailItem";
 export {
 	RegisterForm,
 	UserForm,
@@ -28,4 +29,5 @@ export {
 	CourseItem,
 	CourseForm,
 	ListEmails,
+	EmailItem,
 };
