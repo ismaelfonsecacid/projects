@@ -12,7 +12,7 @@ export default function MenuForm(props) {
 	const formik = useFormik({
 		initialValues: initialValues(menu),
 		validationSchema: validationSchema(),
-		validateOnChange: FontFaceSetLoadEvent,
+		validateOnChange: false,
 		onSubmit: async (formValue) => {
 			try {
 				const data = {
