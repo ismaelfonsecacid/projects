@@ -1,9 +1,18 @@
-import React from 'react'
+import React from "react";
+import {
+	Banner,
+	HomeCourses,
+	HowMyCoursesWork,
+	Reviews,
+} from "../../../components/Web";
 
 export default function Home() {
-  return (
-    <div>
-      <h1>Estamos en la home de la web</h1>
-    </div>
-  )
+	return (
+		<div>
+			<Banner />
+			<HomeCourses />
+			<HowMyCoursesWork />
+			<Reviews />
+		</div>
+	);
 }
