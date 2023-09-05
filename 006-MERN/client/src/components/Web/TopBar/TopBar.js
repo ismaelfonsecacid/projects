@@ -3,7 +3,7 @@ import "./TopBar.scss";
 import { Container, Button } from "semantic-ui-react";
 import { Await, Link } from "react-router-dom";
 import { map } from "lodash";
-import { Icon } from "../../../assets";
+import { Icon, image } from "../../../assets";
 import { Menu } from "../../../api";
 import { socialData } from "../../../utils";
 
