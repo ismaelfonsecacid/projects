@@ -7,6 +7,8 @@ import { HomeCourses } from "./HomeCourses";
 import { HowMyCoursesWork } from "./HowMyCoursesWork";
 import { Reviews } from "./Reviews";
 import { Course } from "./Course";
+import { ListPost } from "./Blog/ListPosts";
+import { ListPostItem } from "./Blog/ListPostItem";
 export {
 	TopBar,
 	Info,
@@ -17,4 +19,6 @@ export {
 	HowMyCoursesWork,
 	Reviews,
 	Course,
+	ListPost,
+	ListPostItem,
 };
